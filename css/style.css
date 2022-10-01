@@ -61,8 +61,9 @@ body {
 }
 
 main {
+  max-width: 1100px;
   display: grid;
-  gap: 40px;
+  gap: 20px;
 }
 /* *************************** */
 /* TESTIMONIAL CARDS */
@@ -70,7 +71,7 @@ main {
 
 .testimonial-card {
   /* max-width: 400px; */
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.1);
 }
@@ -103,8 +104,8 @@ h2 {
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
       "daniel jeanette"
-      "jonathon kira"
-      "patrick kira";
+      "jonathon patrick"
+      "kira kira";
   }
 
   .daniel-card {
@@ -130,11 +131,11 @@ h2 {
 @media (min-width: 1000px) {
   main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-      "daniel jonathon kira"
-      "jeanette patrick kira";
+      "daniel daniel jonathon kira"
+      "jeanette patrick patrick kira";
   }
 
   .daniel-card {
