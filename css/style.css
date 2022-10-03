@@ -13,6 +13,8 @@
 
   --Light-Gray: hsl(0, 0%, 81%);
   --Ligh-Grayish-Blue: hsl(210, 46%, 95%);
+
+  --Transition: 0.8s ease;
 }
 
 /* *************************** */
@@ -73,10 +75,11 @@ body {
   padding: 20px;
 }
 
-main {
-  max-width: 1100px;
+.testimonial-container {
+  max-width: 1110px;
   display: grid;
   gap: 20px;
+  transition: var(--Transition);
 }
 /* *************************** */
 /* TESTIMONIAL CARDS */
@@ -176,7 +179,7 @@ header {
 }
 
 .testimonial-headshot {
-  max-width: 40px;
+  max-width: 30px;
   border-radius: 50px;
 }
 
@@ -193,12 +196,14 @@ header {
 h2 {
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  transition: var(--Transition);
 }
 
 .testimonial-quote {
   font-size: 13px;
   color: var(--Grayish-Blue);
+  transition: var(--Transition);
 }
 
 /* *************************** */
@@ -206,14 +211,12 @@ h2 {
 /* *************************** */
 
 @media (min-width: 500px) {
-  main {
+  .testimonial-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-      "daniel jeanette"
-      "jonathon patrick"
-      "kira kira";
+      "jonathon jeanette"
+      "kira kira"
+      "daniel patrick";
   }
 
   .daniel-card {
@@ -237,36 +240,32 @@ h2 {
 }
 
 @media (min-width: 1000px) {
-  main {
+  .testimonial-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
       "daniel daniel jonathon kira"
       "jeanette patrick patrick kira";
+    gap: 30px;
   }
 
   .daniel-card {
     grid-area: daniel;
-    /* align-self: center; */
   }
   .jonathan-card {
     grid-area: jonathon;
-    /* align-self: center; */
   }
 
   .jeanette-card {
     grid-area: jeanette;
-    /* align-self: center; */
   }
 
   .patrick-card {
     grid-area: patrick;
-    /* align-self: center; */
   }
 
   .kira-card {
     grid-area: kira;
-    /* align-self: center; */
   }
 }
