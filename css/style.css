@@ -87,7 +87,7 @@ body {
 
 .testimonial-card {
   font-family: "Barlow Semi Condensed", sans-serif;
-  padding: 30px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.1);
 }
@@ -98,6 +98,11 @@ body {
   background-image: url(/images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: left 80% top 0%;
+  transition: var(--Transition);
+}
+
+.daniel-card:hover {
+  transform: scale(1.05);
 }
 
 .testimonial-heading-daniel {
@@ -113,6 +118,11 @@ body {
 
 .jonathan-card {
   background: var(--Grayish-Blue);
+  transition: var(--Transition);
+}
+
+.jonathan-card:hover {
+  transform: scale(1.05);
 }
 
 .testimonial-quote-jonathan {
@@ -128,6 +138,11 @@ body {
 
 .jeanette-card {
   background: var(--White);
+  transition: var(--Transition);
+}
+
+.jeanette-card:hover {
+  transform: scale(1.05);
 }
 
 .testimonial-heading-jeanette {
@@ -143,6 +158,11 @@ body {
 .patrick-card {
   color: var(--White);
   background: var(--Blackish-Blue);
+  transition: var(--Transition);
+}
+
+.patrick-card:hover {
+  transform: scale(1.05);
 }
 
 .testimonial-heading-patrick {
@@ -158,6 +178,10 @@ body {
 
 .kira-card {
   background: var(--White);
+  transition: var(--Transition);
+}
+.kira-card:hover {
+  transform: scale(1.05);
 }
 
 .testimonial-heading-kira {
@@ -216,6 +240,10 @@ h2 {
       "jonathon jeanette"
       "kira kira"
       "daniel patrick";
+  }
+
+  .testimonial-card {
+    padding: 30px;
   }
 
   .daniel-card {
