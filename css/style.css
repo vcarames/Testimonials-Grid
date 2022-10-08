@@ -5,14 +5,19 @@
 /* *************************** */
 
 :root {
-  --Violet: hsl(263, 55%, 52%);
+  --Blue: hsl(215, 58%, 32%);
+  --Blue: hsl(215, 55%, 67%);
   --Grayish-Blue: hsl(217, 19%, 35%);
-  --Blackish-Blue: hsl(219, 29%, 14%);
+  --Blackish-Blue: hsl(217, 30%, 14%);
+
+  /* TEXT */
   --White: hsl(0, 0%, 100%);
   --White-70: hsla(0, 0%, 100%, 0.7);
+  --White-50: hsla(0, 0%, 100%, 0.5);
 
-  --Light-Gray: hsl(0, 0%, 81%);
-  --Ligh-Grayish-Blue: hsl(210, 46%, 95%);
+  --Blackish-Blue: hsl(217, 30%, 14%);
+  --Blackish-Blue-70: hsla(217, 30%, 14%, 0.7);
+  --Blackish-Blue-50: hsla(217, 30%, 14%, 0.5);
 
   --Transition: 0.8s ease;
 }
@@ -73,6 +78,11 @@ body {
   display: grid;
   place-content: center;
   padding: 20px;
+
+  background-image: url(../video/background-video.mp4);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .testimonial-container {
@@ -92,107 +102,112 @@ body {
   box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* **** DANIEL **** */
+
 .daniel-card {
   color: var(--White);
-  background: var(--Violet);
-  background-image: url(/images/bg-pattern-quotation.svg);
+  background-image: url(../images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: left 80% top 0%;
   transition: var(--Transition);
+
+  backdrop-filter: blur(20px) saturate(100%);
+  -webkit-backdrop-filter: blur(20px) saturate(100%);
+  background-color: rgba(34, 74, 129, 0.55);
 }
 
 .daniel-card:hover {
   transform: scale(1.05);
-}
-
-.testimonial-heading-daniel {
-  font-weight: 600;
+  background-color: rgba(34, 74, 129, 0.85);
 }
 
 .testimonial-quote-daniel {
   color: var(--White-70);
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 500;
 }
 
+/* **** JONATHAN **** */
+
 .jonathan-card {
-  background: var(--Grayish-Blue);
+  color: var(--White);
   transition: var(--Transition);
+
+  backdrop-filter: blur(10px) saturate(100%);
+  -webkit-backdrop-filter: blur(10px) saturate(100%);
+  background-color: rgba(72, 85, 106, 0.55);
 }
 
 .jonathan-card:hover {
   transform: scale(1.05);
+  background-color: rgba(72, 85, 106, 0.85);
 }
 
 .testimonial-quote-jonathan {
   color: var(--White-70);
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 400;
 }
 
-.testimonial-heading-jonathan {
-  font-weight: 600;
-}
+/* **** JEANETTE **** */
 
 .jeanette-card {
-  background: var(--White);
+  color: var(--Blackish-Blue);
   transition: var(--Transition);
+
+  backdrop-filter: blur(10px) saturate(100%);
+  -webkit-backdrop-filter: blur(10px) saturate(100%);
+  background-color: rgba(255, 255, 255, 0.55);
 }
 
 .jeanette-card:hover {
   transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
-.testimonial-heading-jeanette {
-  font-weight: 600;
+.quote-jeanette {
+  color: var(--Blackish-Blue-70);
 }
 
-.testimonial-quote-jeanette {
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 400;
-}
+/* **** PATRICK **** */
 
 .patrick-card {
   color: var(--White);
-  background: var(--Blackish-Blue);
   transition: var(--Transition);
+
+  backdrop-filter: blur(10px) saturate(100%);
+  -webkit-backdrop-filter: blur(10px) saturate(100%);
+  background-color: rgba(25, 33, 46, 0.55);
 }
 
 .patrick-card:hover {
   transform: scale(1.05);
-}
-
-.testimonial-heading-patrick {
-  font-weight: 600;
+  background-color: rgba(25, 33, 46, 0.85);
 }
 
 .testimonial-quote-patrick {
   color: var(--White-70);
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 400;
 }
+
+/* **** KIRA **** */
 
 .kira-card {
-  background: var(--White);
+  color: var(--Blackish-Blue);
   transition: var(--Transition);
+
+  backdrop-filter: blur(10px) saturate(100%);
+  -webkit-backdrop-filter: blur(10px) saturate(100%);
+  background-color: rgba(255, 255, 255, 0.55);
 }
+
 .kira-card:hover {
   transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
-.testimonial-heading-kira {
-  font-weight: 500;
+.quote-kira {
+  color: var(--Blackish-Blue-70);
 }
 
-.testimonial-quote-kira {
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 400;
-}
+/* *************************** */
+/* MULTI STYLING */
+/* *************************** */
 
 header {
   display: flex;
@@ -206,6 +221,14 @@ header {
   border-radius: 50px;
 }
 
+.headshot-white {
+  border: 1px solid var(--White);
+}
+
+.headshot-blue {
+  border: 1px solid var(--Blackish-Blue);
+}
+
 .testimonial-name {
   font-size: 13px;
   font-weight: 600;
@@ -213,19 +236,28 @@ header {
 
 .testimonial-verified {
   font-size: 12px;
-  color: var(--Light-Gray);
+  font-weight: 500;
 }
 
-h2 {
+.verified-blue {
+  color: var(--Blackish-Blue-50);
+}
+
+.verified-white {
+  color: var(--White-50);
+}
+
+.testimonial-heading {
   font-size: clamp(1rem, calc(0.9rem + 0.51vw), 1.25rem);
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 12px;
   transition: var(--Transition);
 }
 
 .testimonial-quote {
   font-size: 13px;
-  color: var(--Grayish-Blue);
+  line-height: 1.6;
+  font-weight: 500;
   transition: var(--Transition);
 }
 
