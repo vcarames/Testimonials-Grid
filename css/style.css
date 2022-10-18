@@ -209,7 +209,7 @@ body {
 /* MULTI STYLING */
 /* *************************** */
 
-header {
+figcaption {
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -247,7 +247,7 @@ header {
   color: var(--White-50);
 }
 
-.testimonial-heading {
+.testimonial-quote-bold {
   font-size: clamp(1rem, calc(0.9rem + 0.51vw), 1.25rem);
   font-weight: 600;
   margin-bottom: 0.75rem;
